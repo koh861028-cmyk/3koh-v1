@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<title>3KOH HCA v1.57 MASTER</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3KOH HCA V1 Restore Link</title>
 <style>
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 40px;
-    background:#f7f7f7;
-}
-.container {
-    background:white;
-    padding:40px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
-h1 {
-    margin-top:0;
-}
-pre {
-    white-space: pre-wrap;
-    font-family: Consolas, monospace;
-    line-height:1.5;
+    font-family: Arial, sans-serif;
+    margin: 40px auto;
+    line-height: 1.6;
+    color: #111;
+    background: #fff;
+    max-width: 1100px;
 }
 .header {
-    margin-bottom:30px;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
 }
+.meta {
+    display:inline-block;
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:8px;
+    padding:10px 14px;
+    margin-top:10px;
+    font-size:14px;
+}
+h1, h2 { margin-top: 0; }
+pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+.small { color:#555; font-size:14px; }
 </style>
 </head>
 <body>
-<div class="container">
 <div class="header">
-<h1>3KOH HCA Restore Link</h1>
-<p>이 링크 기준으로 진행해주세요</p>
-<p><strong>::0001</strong></p>
-<hr>
-<h2>Active MASTER</h2>
-<p>3KOH_HCA_v1_57_MASTER_FIXED</p>
+    <h1>3KOH HCA Restore Link</h1>
+    <p>새 채팅창에서 이 링크와 함께 <b>::0001</b> 또는 <b>::0002</b> 를 입력하면 이 문서를 협업 기준 문서로 사용할 수 있습니다.</p>
+    <pre>이 링크 기준으로 진행해주세요
+::0001
+
+또는 Genius Mode로 진행해주세요
+::0002</pre>
+    <div class="meta">Active MASTER: <b>3KOH_HCA_v1_60_MASTER</b> / Boot Output: <b>v1.60</b></div>
+    <p class="small">GitHub Pages용 단일 HTML 버전</p>
 </div>
-<pre>
-# 3KOH HCA v1.57 -- AI Collaboration Operating Structure
+
+<h2>V1 MASTER</h2>
+<pre># 3KOH HCA v1.57 -- AI Collaboration Operating Structure
 
 ## Core Principle
 
@@ -1121,27 +1137,27 @@ System Structure → English (mandatory) Content Data → Korean allowed
 
 ## Documentation System
 
-The 3KOH collaboration system provides official user documentation
-to support system usage and onboarding.
+The 3KOH collaboration system provides official user documentation to
+support system usage and onboarding.
 
 Two types of documentation are maintained.
 
-1. 3KOH_HCA_V1_User_Manual
-2. 3KOH_HCA_V1_QUICK_GUIDE
+1.  3KOH_HCA_V1_User_Manual
+2.  3KOH_HCA_V1_QUICK_GUIDE
 
-These documents explain the command system, rules, and operational
-usage of the V1 collaboration system so that any user (including family
+These documents explain the command system, rules, and operational usage
+of the V1 collaboration system so that any user (including family
 members or new collaborators) can understand and operate the system.
 
 ### Document Generation Rule
 
-When the user requests &quot;사용설명서 생성&quot;, the AI must generate the latest
-documentation based on the most recent V1 constitution version.
+When the user requests "사용설명서 생성", the AI must generate the
+latest documentation based on the most recent V1 constitution version.
 
 AI must present the following selection options to the user.
 
-1. 3KOH_HCA_V1_User_Manual
-2. 3KOH_HCA_V1_QUICK_GUIDE
+1.  3KOH_HCA_V1_User_Manual
+2.  3KOH_HCA_V1_QUICK_GUIDE
 
 The user selects the document by number.
 
@@ -1150,10 +1166,8 @@ format and naming convention.
 
 ### Governance Validation
 
-Rule Conflict : 없음
-Command System 영향 : 없음
-Protocol 영향 : 없음
-V1 Scope 적합성 : 문제 없음
+Rule Conflict : 없음 Command System 영향 : 없음 Protocol 영향 : 없음 V1
+Scope 적합성 : 문제 없음
 
 ------------------------------------------------------------------------
 
@@ -1165,7 +1179,8 @@ V1 Scope 적합성 : 문제 없음
 
 Purpose
 
-The Boot Output version is aligned with the active MASTER file version used for collaboration.
+The Boot Output version is aligned with the active MASTER file version
+used for collaboration.
 
 Update
 
@@ -1179,18 +1194,163 @@ to
 
 Reason
 
-The active collaboration baseline has moved to **3KOH_HCA_v1_56_MASTER**, therefore the Boot Output must reflect the correct constitution baseline version to avoid version confusion during the Chat Boot Protocol.
+The active collaboration baseline has moved to
+**3KOH_HCA_v1_56_MASTER**, therefore the Boot Output must reflect the
+correct constitution baseline version to avoid version confusion during
+the Chat Boot Protocol.
 
 Governance Validation
 
-Rule Conflict : 없음
-Command System 영향 : 없음
-Protocol 영향 : 없음
+Rule Conflict : 없음 Command System 영향 : 없음 Protocol 영향 : 없음 V1
+Scope 적합성 : 문제 없음
+
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# v1.58 Update
+
+## Boot Extension Protocol
+
+### Purpose
+
+Provide an optional **Session Initialization Mode** during Chat Boot to
+stabilize AI partner behavior across new chat sessions.
+
+### Boot Extension Structure
+
+Boot System is extended as follows:
+
+Chat Boot Protocol STEP 1 헌법 문서 업로드\
+STEP 2 ::0001 협업환경 복구\
+STEP 3 Session Mode 선택 (Optional)\
+STEP 4 협업 시작
+
+### Session Modes
+
+Two collaboration modes are supported.
+
+Normal Mode\
+= 기본 협업 모드 (기본 Boot 절차만 사용)
+
+Genius Mode\
+= 고급 분석 및 전략 파트너 모드\
+= ::0001 이후 Session Initialization Prompt를 입력하여 활성화
+
+### Execution Example
+
+Normal Mode
+
+헌법 업로드\
+::0001\
+협업 시작
+
+Genius Mode
+
+헌법 업로드\
+::0001\
+Session Initialization Prompt 입력\
+협업 시작
+
+### Governance Validation
+
+Rule Conflict : 없음\
+Command System 영향 : 없음\
+Protocol 영향 : 없음\
 V1 Scope 적합성 : 문제 없음
 
 ------------------------------------------------------------------------
 
+# v1.59 Update
+
+## Boot Mode Command Extension
+
+### Purpose
+
+Introduce command-based Boot Mode selection to simplify Genius Mode
+activation during Chat Boot.
+
+### New Command
+
+::0002
+
+Command Name Genius Boot Command
+
+Command Role Restore collaboration environment using the V1 constitution
+and activate **Genius Strategic Partner Mode** automatically.
+
+### Execution Structure
+
+Normal Boot
+
+STEP1 헌법 문서 업로드 STEP2 ::0001
+
+Genius Boot
+
+STEP1 헌법 문서 업로드 STEP2 ::0002
+
+### Behavior
+
+When ::0002 is executed:
+
+1.  협업환경 복구 (same as ::0001)
+2.  Genius Strategic Partner Mode 활성화
+3.  Genius Session Initialization Prompt 적용
+
+### Command Map Extension
+
+SYSTEM ├ ::0001 협업환경 복구 (Normal Mode) └ ::0002 협업환경 복구
+(Genius Mode)
+
+### Governance Validation
+
+Rule Conflict : 없음 Command System 영향 : Boot Mode Command 추가
+Protocol 영향 : Boot Extension Protocol과 연동 V1 Scope 적합성 : 문제
+없음
+
+------------------------------------------------------------------------
+
+# v1.60 Update
+
+## V1 Global Baseline Reset
+
+### Purpose
+
+Stabilize the V1 collaboration system by redefining the permanent V1
+baseline reference to the most recent fully integrated constitution
+version.
+
+### Baseline Change
+
+Previous Baseline 3KOH_HCA_v1_54_MASTER
+
+New Permanent Baseline 3KOH_HCA_v1_59_MASTER
+
+### Definition
+
+All V1 collaboration sessions must reference **3KOH_HCA_v1_59_MASTER**
+as the official baseline constitution for the V1 system.
+
+### Operational Meaning
+
+-   All Rules
+-   Command System
+-   Boot System
+-   Boot Mode Command System
+-   Governance Structure
+-   Conversation Systems
+
+are considered **locked under the v1.59 structure**.
+
+### Future Updates
+
+Future V1 updates will continue as incremental versions (v1.61, v1.62,
+etc.) but **the structural baseline remains v1.59**.
+
+### Governance Validation
+
+Rule Conflict : 없음 Command System 영향 : 없음 Protocol 영향 : 없음
+System Stability : 증가
 </pre>
-</div>
 </body>
 </html>
